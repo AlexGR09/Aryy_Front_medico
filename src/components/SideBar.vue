@@ -11,20 +11,19 @@
                 </v-list-item>
             </v-list>
             <v-list flat>
-                <v-list-item router to="/">
+                <v-list-item router to="./" >
                     <v-list-item-content>
-                        <v-tooltip right>
+                        <v-tooltip  right>
                             <template v-slot:activator="{ on, attrs }">
-                                <v-icon dark v-bind="attrs" v-on="on" color="#98a1ab" class="mb-2">fa-solid fa-calendar-days</v-icon>
+                                <v-icon dark v-bind="attrs" v-on="on" color="#98a1ab" class="mb-2">fa-solid
+                                    fa-calendar-days</v-icon>
                             </template>
-                            <span>Right tooltip</span>
+                            <span>Calendario</span>
                         </v-tooltip>
-            
-                            
                     </v-list-item-content>
                 </v-list-item>
-                <v-list-item router to="/">
-                    <v-list-item-content>
+                <v-list-item router to="/about" color="primary">
+                    <v-list-item-content color="primary">
                         <v-icon title="Pacientes" color="#98a1ab" class="mb-2">fa-light fa-user-group</v-icon>
                     </v-list-item-content>
                 </v-list-item>
