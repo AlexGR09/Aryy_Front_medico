@@ -3,7 +3,7 @@
         <!-- start code logotipo de Aryy | Luis Reyes-->
         <v-tooltip right>
             <template v-slot:activator="{ on, attrs }">
-                <v-list-item-content>
+                <v-list-item-content >
                     <v-icon dark v-bind="attrs" v-on="on" color="#3d83df" class="mb-2" large>fa-solid fa-notes-medical
                     </v-icon>
                 </v-list-item-content>
@@ -18,7 +18,7 @@
                 <v-tooltip right>
                     <template v-slot:activator="{ on, attrs }">
                         <v-list-item >
-                            <v-list-item-content color="primary" route :to="item.route">
+                            <v-list-item-content color="primary" >
                                 <v-icon  id="icon" class="mb-2" v-bind="attrs" v-on="on">{{ item.icon }}</v-icon>
                             </v-list-item-content>
                         </v-list-item>
@@ -64,7 +64,7 @@
 export default {
     data: () => ({
         //drawer: true
-        /*Creación de ITEM |  Luis Reyes */
+        /*Creación de items |  Luis Reyes */
         selectedItem: 0,
         drawer: null,
         items: [
@@ -259,21 +259,16 @@ export default {
 #icon {
     color: #abb2ba;
 }
-
 #icon:hover {
     color: #627282;
 }
-
-
-
-
-.v-list-item .v-list-item-content--active {
-    color: #3d83df !important;
+#icon:active {
+    color: #3d83df
 }
 
-.theme--light.v-list-item-content--active .v-list-item-content__subtitle,
-.theme--light.v-list-item-content .v-list-item-content__action-text {
-    color: white !important;
-}
+
+
+
+
 </style>
 
