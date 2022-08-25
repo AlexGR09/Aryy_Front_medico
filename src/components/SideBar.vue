@@ -18,8 +18,8 @@
                 <v-tooltip right>
                     <template v-slot:activator="{ on, attrs }">
                         <v-list-item >
-                            <v-list-item-content color="primary" >
-                                <v-icon  id="icon" class="mb-2" v-bind="attrs" v-on="on">{{ item.icon }}</v-icon>
+                            <v-list-item-content >
+                                <v-icon active-class="icono" id="icon" class="mb-2" v-bind="attrs" v-on="on">{{ item.icon }}</v-icon>
                             </v-list-item-content>
                         </v-list-item>
                     </template>
@@ -76,6 +76,9 @@ export default {
             { icon: 'fa-regular fa-paper-plane', route: '/campaigns', span: 'Campañas' },
             { icon: 'fa-duotone fa-calculator', route: '/quotes', span: 'Presupuesto' },
             { icon: 'fa-solid fa-gear', route: '/settings', span: 'Ajustes' },
+        ],
+        items01: [
+            { icon: 'fas fa-user-md', route: '/edicion-de-perfil', span: 'Mi Perfil' },
         ]
 
     })
@@ -262,13 +265,18 @@ export default {
 #icon:hover {
     color: #627282;
 }
-#icon:active {
-    color: #3d83df
+
+#icon::done{
+       color: #3d83df;
 }
 
+.icono:active{
+    color: #3d83df;
+}
 
-
-
+.v-icon:active{
+color: #3d83df;
+}
 
 </style>
 

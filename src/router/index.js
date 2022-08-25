@@ -58,8 +58,16 @@ const routes = [
     name: 'settings',
     component: () => import(/* webpackChunkName: "about" */ '../views/settings/SettingsView.vue')
   },
+  /*RUTA AJUSTES */
+  {
+    path: '/edicion-de-perfil',
+    name: 'profile',
+    component: () => import(/* webpackChunkName: "about" */ '../views/profile/ProfileView.vue')
+  },
   
 ]
+
+
 
 const router = new VueRouter({
   mode: 'history',
