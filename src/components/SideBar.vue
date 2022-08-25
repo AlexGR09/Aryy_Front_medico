@@ -14,12 +14,12 @@
 
         <!-- start code menú | Luis Reyes-->
         <v-list dense>
-            <v-list-item v-for="item in items" route :to="item.route" :key="item.title" link active-class="border" :ripple="false" >
+            <v-list-item v-for="item in items" route :to="item.route" :key="item.title" link active-class="border" :ripple="false" color="primary">
                 <v-tooltip right>
                     <template v-slot:activator="{ on, attrs }">
                         <v-list-item >
-                            <v-list-item-content >
-                                <v-icon active-class="icono" id="icon" class="mb-2" v-bind="attrs" v-on="on">{{ item.icon }}</v-icon>
+                            <v-list-item-content color="primary" >
+                                <v-icon active-class="border" id="icon" class="mb-2" v-bind="attrs" v-on="on">{{ item.icon }}</v-icon>
                             </v-list-item-content>
                         </v-list-item>
                     </template>
