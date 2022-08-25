@@ -10,7 +10,7 @@
 
 
 <script>
-/*importamos el componente Sidebar | Luis Reyes */
+/*importamos compinentes| Luis Reyes */
 
 import SideBar from './components/SideBar.vue'
 

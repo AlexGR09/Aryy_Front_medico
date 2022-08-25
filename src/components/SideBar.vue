@@ -1,5 +1,4 @@
 <template>
-
     <v-navigation-drawer v-model="drawer" permanent darp app mini-variant mini-variant-width="80">
         <!-- start code logotipo de Aryy | Luis Reyes-->
         <v-tooltip right>
@@ -15,12 +14,14 @@
 
         <!-- start code menú | Luis Reyes-->
         <v-list dense>
-            <v-list-item v-for="item in items" :key="item.title" link active-class="border" :ripple="false">
+            <v-list-item v-for="item in items" route :to="item.route" :key="item.title" link active-class="border" :ripple="false" >
                 <v-tooltip right>
                     <template v-slot:activator="{ on, attrs }">
-                        <v-list-item-content color="primary">
-                            <v-icon color="#98a1ab" class="mb-2" v-bind="attrs" v-on="on">{{ item.icon }}</v-icon>
-                        </v-list-item-content>
+                        <v-list-item >
+                            <v-list-item-content color="primary" route :to="item.route">
+                                <v-icon  id="icon" class="mb-2" v-bind="attrs" v-on="on">{{ item.icon }}</v-icon>
+                            </v-list-item-content>
+                        </v-list-item>
                     </template>
                     <span v-text="item.span"></span>
                 </v-tooltip>
@@ -33,6 +34,27 @@
             </v-list-item>
         </v-list>
         <!-- finish code menú | Luis Reyes-->
+
+        <!-- start code icon-absolute | Luis Reyes-->
+        <v-list style="position:absolute; bottom: 0;" class="mb-2 ml-3" flat>
+            <v-list-item router to="/">
+                <v-list-action>
+                    <v-icon color="#98a1ab">far fa-question-circle</v-icon>
+                </v-list-action>
+            </v-list-item>
+
+            <v-list-item router to="/">
+                <v-list-action>
+                    <v-icon color="#98a1ab">far fa-bell</v-icon>
+                </v-list-action>
+            </v-list-item>
+            <v-list-item router to="/">
+                <v-list-action>
+                    <v-icon color="#98a1ab">fa-regular fa-circle-user</v-icon>
+                </v-list-action>
+            </v-list-item>
+        </v-list>
+        <!-- finish code icon-absolute | Luis Reyes-->
     </v-navigation-drawer>
 </template>
 
@@ -48,16 +70,14 @@ export default {
         items: [
             { icon: 'fa-calendar-days', route: '/calendar', span: 'Calendario' },
             { icon: 'fa-light fa-user-group', route: '/patients', span: 'Pacientes' },
-            { icon: 'fa-solid fa-comment-dots', route: '/', span: 'Mensajes' },
-            { icon: 'fa-solid fa-chart-line', route: '/', span: 'Panel de control' },
-            { icon: 'fa-solid fa-file-invoice', route: '/', span: 'Paquete de vales' },
-            { icon: 'fa-regular fa-paper-plane', route: '/', span: 'Campañas' },
-            { icon: 'fa-duotone fa-calculator', route: '/', span: 'Presupuesto' },
-            { icon: 'fa-solid fa-gear', route: '/configuración', span: 'Ajustes' },
-            // {icon: 'far fa-question-circle', route:'/'},
-            //{icon: 'far fa-bell', route:'/'},
-            //{icon: 'fa-regular fa-circle-user', route:'/'},
+            { icon: 'fa-solid fa-comment-dots', route: '/messages', span: 'Mensajes' },
+            { icon: 'fa-solid fa-chart-line', route: '/dashboard', span: 'Panel de control' },
+            { icon: 'fa-solid fa-file-invoice', route: '/vouchers', span: 'Paquete de vales' },
+            { icon: 'fa-regular fa-paper-plane', route: '/campaigns', span: 'Campañas' },
+            { icon: 'fa-duotone fa-calculator', route: '/quotes', span: 'Presupuesto' },
+            { icon: 'fa-solid fa-gear', route: '/settings', span: 'Ajustes' },
         ]
+
     })
 }
 
@@ -191,11 +211,6 @@ export default {
                                     <v-icon class="d-block text-center mb-2" v-bind="attrs" v-on="on"
                                         v-text="item.icon"></v-icon>
                                 </v-list-item-content>
-
-                                <!-- 
-                                <v-avatar v-bind="attrs" v-on="on" class="d-block text-center mb-2" size="40">
-                                    
-                                </v-avatar> -->
                             </template>
                             <span v-text="item.span"></span>
                         </v-tooltip>
@@ -204,7 +219,12 @@ export default {
                     </v-list-item-content>
                 </v-list-item>
             </v-list-item-group>
-            <!-- iconos SideBar | Luis Reyes-->
+           
+           
+           
+           
+           
+           <!-- iconos SideBar | Luis Reyes-->
             <v-divider></v-divider>
             <!--icono de Mi Perfil | Luis Reyes-->
             <v-list-item router to="/edicion-de-perfil" color="primary">
@@ -229,24 +249,31 @@ export default {
 
 
 .border {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
     background: #eef4fd;
     border-radius: 10%;
     text-decoration: none;
 }
 
-#icon-sidebar {
+#icon {
     color: #abb2ba;
 }
 
-.v-list-item-group .v-list-item--active {
+#icon:hover {
+    color: #627282;
+}
+
+
+
+
+.v-list-item .v-list-item-content--active {
     color: #3d83df !important;
 }
 
-.theme--light.v-list-item--active .v-list-item__subtitle,
-.theme--light.v-list-item .v-list-item__action-text {
-    color: #3d83df !important;
+.theme--light.v-list-item-content--active .v-list-item-content__subtitle,
+.theme--light.v-list-item-content .v-list-item-content__action-text {
+    color: white !important;
 }
 </style>
 
