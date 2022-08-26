@@ -1,15 +1,16 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+
+import CalendarView from '../views/calendar/CalendarView.vue'
 
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: '/calendar',
+    name: 'calendario',
+    component: CalendarView
   },
   {
     path: '/about',
@@ -64,6 +65,13 @@ const routes = [
     name: 'profile',
     component: () => import(/* webpackChunkName: "about" */ '../views/profile/ProfileView.vue')
   },
+  /*RUTA AJUSTES */
+  {
+    path: '/edicion-de-perfil',
+    name: 'profile',
+    component: () => import(/* webpackChunkName: "about" */ '../views/profile/ProfileView.vue')
+  },
+
   
 ]
 

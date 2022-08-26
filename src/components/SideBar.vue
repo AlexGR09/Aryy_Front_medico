@@ -3,13 +3,16 @@
         <!-- start code logotipo de Aryy | Luis Reyes-->
         <v-tooltip right>
             <template v-slot:activator="{ on, attrs }">
-                <v-list-item-content >
-                    <v-icon class="mb-2" id="icon-logo" dark v-bind="attrs" v-on="on" large>fa-solid fa-notes-medical
+                <v-list-item-content  >
+                    <v-list-item >
+                        <v-icon class="mb-2" id="icon-logo" dark v-bind="attrs" v-on="on" large>fa-solid fa-notes-medical
                     </v-icon>
+                    </v-list-item>
                 </v-list-item-content>
             </template>
             <span>Docplanner</span>
         </v-tooltip>
+        
         <!-- finish code logotipo de Aryy | Luis Reyes -->
 
         <!-- start code menú | Luis Reyes -->
