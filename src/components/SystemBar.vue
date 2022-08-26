@@ -10,7 +10,6 @@
             <v-btn small class="withoutupercase" outlined color="grey darken-1">Semana</v-btn>
             <v-btn small class="withoutupercase" outlined color="grey darken-1">Agenda</v-btn>
             <v-btn small class="withoutupercase" outlined color="grey darken-1">Horas disponibles</v-btn>
-
         </div>
 
         <v-avatar tile>

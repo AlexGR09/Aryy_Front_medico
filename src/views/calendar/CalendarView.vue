@@ -30,7 +30,7 @@
               <v-btn outlined color="grey darken-2" v-bind="attrs" v-on="on">
                 <span>{{ typeToLabel[type] }}</span>
                 <v-icon right>
-                  mdi-menu-down
+                  mdi-men 
                 </v-icon>
               </v-btn>
             </template>
