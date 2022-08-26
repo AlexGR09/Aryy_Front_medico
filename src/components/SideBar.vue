@@ -4,22 +4,22 @@
         <v-tooltip right>
             <template v-slot:activator="{ on, attrs }">
                 <v-list-item-content >
-                    <v-icon dark v-bind="attrs" v-on="on" color="#3d83df" class="mb-2" large>fa-solid fa-notes-medical
+                    <v-icon class="mb-2" id="icon-logo" dark v-bind="attrs" v-on="on" large>fa-solid fa-notes-medical
                     </v-icon>
                 </v-list-item-content>
             </template>
             <span>Docplanner</span>
         </v-tooltip>
-        <!-- finish code logotipo de Aryy | Luis Reyes-->
+        <!-- finish code logotipo de Aryy | Luis Reyes -->
 
-        <!-- start code menú | Luis Reyes-->
+        <!-- start code menú | Luis Reyes -->
         <v-list dense>
-            <v-list-item v-for="item in items" route :to="item.route" :key="item.title" link active-class="border" :ripple="false" color="primary">
+            <v-list-item v-for="item in items" route :to="item.route" :key="item.title" link active-class="border" :ripple="false" color="#eef4fd">
                 <v-tooltip right>
                     <template v-slot:activator="{ on, attrs }">
                         <v-list-item >
-                            <v-list-item-content color="primary" >
-                                <v-icon active-class="border" id="icon" class="mb-2" v-bind="attrs" v-on="on">{{ item.icon }}</v-icon>
+                            <v-list-item-content>
+                                <v-icon active-class="hola" id="icon" class="mb-2" v-bind="attrs" v-on="on">{{ item.icon }}</v-icon>
                             </v-list-item-content>
                         </v-list-item>
                     </template>
@@ -42,7 +42,6 @@
                     <v-icon color="#98a1ab">far fa-question-circle</v-icon>
                 </v-list-action>
             </v-list-item>
-
             <v-list-item router to="/">
                 <v-list-action>
                     <v-icon color="#98a1ab">far fa-bell</v-icon>
@@ -247,16 +246,29 @@ export default {
 </script>
 
 
-<style scoped>
+<style>
 /* estilos | Luis Reyes */
 
 
-.border {
+.v-list-item .v-list-item-content--active {
+    color:#3d83df !important;
+}
+.theme--light.v-list-item--active .v-list-item__subtitle, .theme--light.v-list-item .v-list-item__action-text {
+    color: white !important;
+}
+
+.border{
     margin-left: 10px;
     margin-right: 10px;
     background: #eef4fd;
     border-radius: 10%;
     text-decoration: none;
+}
+#icon-logo{
+    color:#3d83df;
+}
+#icon-logo:hover{
+    color: #627282;
 }
 
 #icon {
@@ -266,17 +278,11 @@ export default {
     color: #627282;
 }
 
-#icon::done{
-       color: #3d83df;
+.hola--active {
+  fill: #3d83df !important;
 }
 
-.icono:active{
-    color: #3d83df;
-}
 
-.v-icon:active{
-color: #3d83df;
-}
 
 </style>
 
