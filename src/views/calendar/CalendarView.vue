@@ -1,9 +1,4 @@
 <template>
-
-
-
-
-
   <v-row class="fill-height">
     <v-col>
       <v-sheet height="64">
@@ -82,7 +77,13 @@
         </v-menu>
       </v-sheet>
     </v-col>
+
+
+
+    
   </v-row>
+
+  
 </template>
 
 <script>
@@ -91,9 +92,9 @@ export default {
     focus: '',
     type: 'month',
     typeToLabel: {
-      month: 'Month',
-      week: 'Week',
-      day: 'Day',
+      month: 'Mes',
+      week: 'Semana',
+      day: 'Día',
       '4day': '4 Days',
     },
     selectedEvent: {},

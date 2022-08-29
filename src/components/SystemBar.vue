@@ -1,31 +1,40 @@
 <template>
-    <v-app-bar color="white" app dark flat>
-        <v-spacer></v-spacer>
-
-
-        <div class="d-flex justify-end ">
-           
-            <v-btn small class="withoutupercase" outlined color="grey darken-1">Lista de citas</v-btn>
-            <v-btn small class="withoutupercase" outlined color="grey darken-1">Día</v-btn>
-            <v-btn small class="withoutupercase" outlined color="grey darken-1">Semana</v-btn>
-            <v-btn small class="withoutupercase" outlined color="grey darken-1">Agenda</v-btn>
-            <v-btn small class="withoutupercase" outlined color="grey darken-1">Horas disponibles</v-btn>
-        </div>
-
-        <v-avatar tile>
-            <v-icon small color="#98a1ab">fa-light fa-share-nodes</v-icon>
-        </v-avatar>
-        <v-avatar tile>
-            <v-icon small color="#98a1ab">fa-solid fa-gear</v-icon>
-        </v-avatar>
-    </v-app-bar>
-</template>
-
-
-
-
-<style>
-.v-btn.withoutupercase {
-    text-transform: none !important;
-}
-</style>
+    <material-card
+      class="v-card--material-stats"
+      v-bind="$attrs"
+      v-on="$listeners"
+    >
+      <template #subtitle>
+        <div
+          class="text-right text-h3 v-card__subtitle--material-stats"
+          v-text="value"
+        />
+      </template>
+  
+      <template #actions>
+        <slot name="actions" />
+      </template>
+  
+      <slot />
+    </material-card>
+  </template>
+  
+  <script>
+    export default {
+      name: 'MaterialStatCard',
+  
+      props: { value: String },
+    }
+  </script>
+  
+  <style lang="sass">
+  .v-card--material-stats.v-card--material .v-card--material__title
+    color: #999999
+    font-size: .875rem !important
+    margin-left: auto
+    text-align: right
+  
+  .v-card__subtitle--material-stats
+    color: #3C4858
+  </style>
+  
