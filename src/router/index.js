@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-
 import CalendarView from '../views/calendar/CalendarView.vue'
 
 
@@ -59,19 +58,17 @@ const routes = [
     name: 'settings',
     component: () => import(/* webpackChunkName: "about" */ '../views/settings/SettingsView.vue')
   },
-  /*RUTA AJUSTES */
+  /*RUTA PERFIL */
   {
     path: '/edicion-de-perfil',
     name: 'profile',
     component: () => import(/* webpackChunkName: "about" */ '../views/profile/ProfileView.vue')
   },
-  /*RUTA AJUSTES */
   {
-    path: '/edicion-de-perfil',
-    name: 'profile',
-    component: () => import(/* webpackChunkName: "about" */ '../views/profile/ProfileView.vue')
+    path: '/edicion-de-perfil/editar',
+    name: 'Editprofile',
+    component: () => import(/* webpackChunkName: "about" */ '../views/profile/editPerfil.vue')
   },
-
   
 ]
 
