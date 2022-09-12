@@ -28,6 +28,16 @@ const routes = [
     name: 'patient',
     component: () => import(/* webpackChunkName: "about" */ '../views/patient/patient-view.vue')
   },
+  {
+    path: '/patients/agregar',
+    name: 'addPatient',
+    component: () => import(/* webpackChunkName: "about" */ '../views/patient/addPatient.vue')
+  },
+
+
+
+
+
   /*RUTA MENSAJES */
   {
     path: '/messages',

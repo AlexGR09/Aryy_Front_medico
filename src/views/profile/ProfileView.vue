@@ -83,7 +83,7 @@ export default {
     methods: {
         getTodos() {
             console.log('peticion GET');
-            axios.get('https://rickandmortyapi.com/api/character/15')
+            axios.get('https://rickandmortyapi.com/api/character/1')
                 .then(res => {
                     /* console.log(res) */
                     /* this.characters = res.data.results */ /* -> para listar todo la API */

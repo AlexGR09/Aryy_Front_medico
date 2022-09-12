@@ -1,75 +1,78 @@
 <template>
-    <v-navigation-drawer id="default-drawer" v-model="drawer" :dark="dark" :right="$vuetify.rtl"
-        :src="drawerImage ? image : ''" :mini-variant.sync="mini" mini-variant-width="80" app width="260">
-        <template v-if="drawerImage" #img="props">
-            <v-img :key="image" :gradient="gradient" v-bind="props" />
-        </template>
-        <div class="px-2">
-            <default-drawer-header />
-            <v-divider class="mx-3 mb-2" />
-            <default-list :items="items" />
-            <v-card class="d-block text-center mx-1 mt-4 my-10 rounded-bl-xl rounded-tr-xl pa-2">
-                <v-icon color="#F7AFB0" x-large>fa-solid fa-notes-medical</v-icon>
-            </v-card>
-
-            <v-list flat class="mt-5">
-                <v-list-item-group v-model="selectedItem">
-                    <v-list-item v-for="(item, i) in items" :key="i" route :to="item.route" active-class="activeC"
-                        :ripple="false">
-                        <v-list-item-icon>
-                            <v-icon v-text="item.icon" color="#F7AFB0"></v-icon>
+    <nav>
+        <v-navigation-drawer permanent app dark color="#fff">
+            <div class="logotipo">
+                <v-img :src="require('@/assets/logos/ICONS_SPA_ISOLOGO.svg')" max-width="110"></v-img>
+            </div>
+            <v-divider class="mx-10 mt-3"></v-divider>
+            <v-list dense class="mt-5">
+                <v-list-item-group v-model="selectedItem" color="white" active-class="bg-active">
+                    <v-list-item class="list-item" v-for="(item, i) in items" :key="i" v-slot="{ active }" >
+                        <v-list-item-icon class="ml-6" >
+                            <v-img :src="item.url"></v-img>
                         </v-list-item-icon>
-                        <v-list-item-subtitle align="center" v-text="item.title" class="mt-3 caption">
-                        </v-list-item-subtitle>
+                        <v-list-item-content>
+                            <v-list-item-title class="text-h7" v-text="item.title" :class="active ? 'white--text' : 'grey--text'">
+                            </v-list-item-title>
+                        </v-list-item-content>
                     </v-list-item>
                 </v-list-item-group>
             </v-list>
-        </div>
-
-        <template #append>
-            <div class="pa-4 text-center">
-                <app-btn class="text-none mb-4" color="white" href="https://vuetifyjs.com" small text>
-                    Proyecto en construcción
-                </app-btn>
-            </div>
-        </template>
-        <div class="pt-12" />
-    </v-navigation-drawer>
-</template> 
+        </v-navigation-drawer>
+    </nav>
+</template>
 
 <script>
 export default {
     data: () => ({
         selectedItem: 0,
-        drawer: null,
         items: [
-            { title: 'Calendario', icon: 'fa-calendar-days', route: '/calendar', span: 'Calendario' },
-            { title: 'Pacientes', icon: 'fa-light fa-user-group', route: '/patients', span: 'Pacientes' },
-            { title: 'mensajes', icon: 'fa-solid fa-comment-dots', route: '/messages', span: 'Mensajes' },
-            { title: 'Panel de control', icon: 'fa-solid fa-chart-line', route: '/dashboard', span: 'Panel de control' },
-            { title: 'Pquetes de vales', icon: 'fa-solid fa-file-invoice', route: '/vouchers', span: 'Paquete de vales' },
-            { title: 'Campañas', icon: 'fa-regular fa-paper-plane', route: '/campaigns', span: 'Campañas' },
-            { title: 'presupuesto', icon: 'fa-duotone fa-calculator', route: '/quotes', span: 'Presupuesto' },
-            { title: 'Ajustes', icon: 'fa-solid fa-gear', route: '/settings', span: 'Ajustes' },
-            { title: 'Mi Perfil', icon: 'fas fa-user-md', route: '/edicion-de-perfil', span: 'Mi Perfil' },
+            { url: require("@/assets/iconos/icon_inicio.svg"), title: 'Inicio', route: '/calendar', },
+            { url: require("@/assets/iconos/icon_calendario.svg"), title: 'Calendario', route: '/patients' },
+            { url: require("@/assets/iconos/icon_paciente.svg"), title: 'Pacientes', route: '/messages' },
+            { url: require("@/assets/iconos/icon_mensaje.svg"), title: 'Mensajes', route: '/dashboard' },
+            { url: require("@/assets/iconos/icon_finanzas.svg"), title: 'Finanzas', route: '/vouchers' },
+            { url: require("@/assets/iconos/icon_estadistica.svg"), title: 'Estadísticas', route: '/campaigns' },
+            { url: require("@/assets/iconos/icon_marketing.svg"), title: 'Marketing', route: '/quotes' },
+            { url: require("@/assets/iconos/icon_noticia.svg"), title: 'Noticias', route: '/settings' },
+            { url: require("@/assets/iconos/icon_compras.svg"), title: 'Compras', route: '/edicion-de-perfil' },
+            { url: require("@/assets/iconos/icon_asistente.svg"), title: 'Asistente', route: '/edicion-de-perfil' },
+            { url: require("@/assets/iconos/icon_ajuste.svg"), title: 'Ajustes', route: '/edicion-de-perfil' },
         ],
-    }),
-};
+    })
+}
 </script>
+    
 <style>
-.activeC {
-    box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.2),
-        15px 15px 15px rgba(0, 0, 0, 0.1),
-        inset -10px -10px 10px rgba(255, 255, 255, 0.2),
-        inset 15px 15px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
+.image {
+    border: 2px solid #2EBFAF;
 }
 
-.v-list-item-group .v-list-item--active {
+.v-navigation-drawer {
+    border-right: 1px solid #ddd;
+    height: 85px;
+    box-shadow: 3px 0px 5px 1px #eaeaea;
+}
+
+.logotipo {
+    display: flex;
+    justify-content: center;
+}
+
+
+.v-list-item:hover {
+    background-color: #7900ff;
+    color: white;
+}
+
+
+.bg-active {
+    background-color: #7900ff;
     color: white !important;
 }
 
-.round {
-    border: 20px solid grey;
+.img-active {
+    background-color: black;
+  color : white !important;
 }
 </style>
