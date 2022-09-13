@@ -17,4 +17,4 @@
             </v-icon>
         </v-btn>
     </v-app-bar>
-</template> 
+</template>
