@@ -1,27 +1,23 @@
 <template>
-    <nav>
-        <v-navigation-drawer permanent app dark color="#fff">
+        <v-navigation-drawer permanent app dark color="#fff" :mini-variant.sync="mini">
             <div class="logotipo">
-                <v-img :src="require('@/assets/logos/ICONS_SPA_ISOLOGO.svg')" max-width="110"></v-img>
+                <v-img :src="require('@/assets/logos/ICONS_SPA_ISOLOGO.svg')" max-width="100"></v-img>
             </div>
-            <v-divider class="mx-10 mt-3"></v-divider>
-            <v-list dense class="mt-5">
+            <v-list dense>
                 <v-list-item-group v-model="selectedItem" color="white" active-class="bg-active">
-                    <v-list-item class="list-item" v-for="(item, i) in items" :key="i" v-slot="{ active }" >
-                        <v-list-item-icon class="ml-6" >
+                    <v-list-item class="px-2" v-for="(item, i) in items" :key="i" v-slot="{ active }">
+                        <v-list-item-icon class="ml-2" style="width: 20px;">
                             <v-img :src="item.url"></v-img>
                         </v-list-item-icon>
                         <v-list-item-content>
-                            <v-list-item-title class="text-h7" v-text="item.title" :class="active ? 'white--text' : 'grey--text'">
-                            </v-list-item-title>
+                            <v-list-item-title class="text-h7" v-text="item.title"
+                                :class="active ? 'white--text' : 'grey--text'"></v-list-item-title>
                         </v-list-item-content>
                     </v-list-item>
                 </v-list-item-group>
             </v-list>
         </v-navigation-drawer>
-    </nav>
 </template>
-
 <script>
 export default {
     data: () => ({
@@ -39,6 +35,7 @@ export default {
             { url: require("@/assets/iconos/icon_asistente.svg"), title: 'Asistente', route: '/edicion-de-perfil' },
             { url: require("@/assets/iconos/icon_ajuste.svg"), title: 'Ajustes', route: '/edicion-de-perfil' },
         ],
+        mini: true,
     })
 }
 </script>
@@ -71,8 +68,9 @@ export default {
     color: white !important;
 }
 
-.img-active {
-    background-color: black;
-  color : white !important;
+.v-img:hover {
+    color: white !important;
+
 }
 </style>
+
