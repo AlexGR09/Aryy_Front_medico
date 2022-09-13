@@ -1,5 +1,7 @@
 <template>
     <!-- CARD DEL PERFIL | luis reyes-->
+    <v-content>
+
     <div class="container">
         <section>
             <div class="swiper mySwiper container">
@@ -58,6 +60,8 @@
             </div>
         </section>
     </div>
+            
+</v-content>
     <!-- CARD DEL PERFIL | luis reyes -->
 </template>
 

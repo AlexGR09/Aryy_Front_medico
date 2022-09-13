@@ -43,9 +43,9 @@ export default {
                 { url: require("@/assets/iconos/icon_estadistica.svg"), title: 'Estadísticas', route: '/campaigns' },
                 { url: require("@/assets/iconos/icon_marketing.svg"), title: 'Marketing', route: '/quotes' },
                 { url: require("@/assets/iconos/icon_noticia.svg"), title: 'Noticias', route: '/settings' },
-                { url: require("@/assets/iconos/icon_compras.svg"), title: 'Compras', route: '/edicion-de-perfil' },
-                { url: require("@/assets/iconos/icon_asistente.svg"), title: 'Asistente', route: '/edicion-de-perfil' },
-                { url: require("@/assets/iconos/icon_ajuste.svg"), title: 'Ajustes', route: '/edicion-de-perfil' },
+                { url: require("@/assets/iconos/icon_compras.svg"), title: 'Compras',},
+                { url: require("@/assets/iconos/icon_asistente.svg"), title: 'Asistente',  },
+                { url: require("@/assets/iconos/icon_ajuste.svg"), title: 'Ajustes',},
             ],
             mini: true,
         }
