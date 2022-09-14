@@ -37,7 +37,7 @@ export default {
             items: [
                 { url: require("@/assets/iconos/icon_inicio.svg"), title: 'Inicio', route: '/calendar', },
                 { url: require("@/assets/iconos/icon_calendario.svg"), title: 'Calendario', route: '/patients' },
-                { url: require("@/assets/iconos/icon_paciente.svg"), title: 'Pacientes', route: '/messages' },
+                { url: require("@/assets/iconos/icon_paciente.svg"), title: 'Pacientes', route: '/patient' },
                 { url: require("@/assets/iconos/icon_mensaje.svg"), title: 'Mensajes', route: '/dashboard' },
                 { url: require("@/assets/iconos/icon_finanzas.svg"), title: 'Finanzas', route: '/vouchers' },
                 { url: require("@/assets/iconos/icon_estadistica.svg"), title: 'Estadísticas', route: '/campaigns' },

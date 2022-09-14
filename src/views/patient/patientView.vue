@@ -10,7 +10,7 @@
                 </form>
                 <div class="row">
                     <div class="col-4">
-                        <v-btn class="aboutMe" color="primary" elevation="2" router to="/patients/agregar">Agregar
+                        <v-btn class="mt-6 mr-6" color="primary" elevation="2" router to="/addPatient">Agregar
                             paciente</v-btn>
                     </div>
                 </div>
@@ -21,9 +21,11 @@
                     <thead>
                         <tr>
                             <th scope="col">ID</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Especilidad</th>
-                            <th scope="col">Acciones</th>
+                            <th scope="col">NOMBRE Y APELLIDOS</th>
+                            <th scope="col">TELÉFONO</th>
+                            <th scope="col">ÚLTIMA VISITA</th>
+                            <th scope="col">SIGUIENTE VISITA</th>
+                            <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody v-for="character in characters" :key="character.id">
@@ -31,11 +33,13 @@
                             <th scope="row">{{character.id}}</th>
                             <td>{{character.name}}</td>
                             <td>{{character.species}}</td>
+                            <td>{{character.name}}</td>
+                            <td>{{character.species}}</td>
                             <td>
-                                <button type="button" class="btn btn-outline-success">
+                                <button type="button" class="btn btn-outline-success ml-4">
                                     <i class="fa fa-edit" aria-hidden="true"></i>
                                 </button>
-                                <button type="button" class="btn btn-outline-danger">
+                                <button type="button" class="btn btn-outline-danger ml-4">
                                     <i class="fa fa-trash" aria-hidden="true"></i>
                                 </button>
                             </td>
@@ -47,11 +51,11 @@
         <div>
             <nav aria-label="Page navigation example ">
                 <ul class="pagination">
-                    <li class="page-item"><a class="page-link" href="#">atras</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
                     <li class="page-item"><a class="page-link" href="#">1</a></li>
                     <li class="page-item"><a class="page-link" href="#">2</a></li>
                     <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">siguiente</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
                 </ul>
             </nav>
         </div>

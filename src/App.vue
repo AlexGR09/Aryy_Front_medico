@@ -9,7 +9,6 @@
 </template>
 
 <script>
-/*importamos compinentes| Luis Reyes */
 
 import SideBar from './components/SideBar.vue'
 import SystemBar from './components/SystemBar.vue';

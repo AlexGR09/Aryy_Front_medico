@@ -1,84 +1,85 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import CalendarView from '../views/calendar/CalendarView.vue'
+
 
 
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/calendar',
-    name: 'calendario',
-    component: CalendarView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  },
+  
   /*RUTA CALENDARIO */
-  {
+  /*{
     path: '/calendar',
     name: 'calendar',
-    component: () => import(/* webpackChunkName: "about" */ '../views/calendar/CalendarView.vue')
-  },
+    component: () => import( '../views/calendar/calendarView.vue')
+  },*/
   /*RUTA PACIENTE */
   {
-    path: '/patients',
+    path: '/patient',
     name: 'patient',
-    component: () => import(/* webpackChunkName: "about" */ '../views/patient/patient-view.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/patient/patientView.vue')
   },
+
   {
-    path: '/patients/agregar',
+    path: '/addPatient',
     name: 'addPatient',
     component: () => import(/* webpackChunkName: "about" */ '../views/patient/addPatient.vue')
   },
 
+  {
+    path: '/editPatient',
+    name: 'editPatient',
+    component: () => import(/* webpackChunkName: "about" */ '../views/patient/editPatient.vue')
+  },
 
+  {
+    path: '/deletePatient',
+    name: 'deletePatient',
+    component: () => import(/* webpackChunkName: "about" */ '../views/patient/deletePatient.vue')
+  },
 
-
+  {
+    path: '/verPatient',
+    name: 'verPatient',
+    component: () => import(/* webpackChunkName: "about" */ '../views/patient/verPatient.vue')
+  },
 
   /*RUTA MENSAJES */
-  {
+  /*{
     path: '/messages',
     name: 'messages',
-    component: () => import(/* webpackChunkName: "about" */ '../views/message/messages-view.vue')
-  },
+    component: () => import( '../views/message/messagesView.vue')
+  },*/
   /*RUTA PAQUETE DE VALES */
-  {
+  /*{
     path: '/vouchers',
     name: 'vouchers',
-    component: () => import(/* webpackChunkName: "about" */ '../views/vouchers/VouchersView.vue')
-  },
+    component: () => import( '../views/vouchers/VouchersView.vue')
+  },*/
   /*RUTA PAQUETE DE VALES */
-  {
+  /*{
     path: '/campaigns',
     name: 'campaigns',
-    component: () => import(/* webpackChunkName: "about" */ '../views/campaigns/CampaignsView.vue')
-  },
+    component: () => import( '../views/campaigns/CampaignsView.vue')
+  },*/
   /*RUTA PRESUPUESTOS */
-  {
+  /*{
     path: '/quotes',
     name: 'quotes',
-    component: () => import(/* webpackChunkName: "about" */ '../views/quotes/QuotesView.vue')
-  },
+    component: () => import( '../views/quotes/QuotesView.vue')
+  },*/
   /*RUTA AJUSTES */
-  {
+  /*{
     path: '/settings',
     name: 'settings',
-    component: () => import(/* webpackChunkName: "about" */ '../views/settings/SettingsView.vue')
-  },
+    component: () => import( '../views/settings/SettingsView.vue')
+  },*/
   /*RUTA PERFIL */
-  {
+  /*{
     path: '/edicion-de-perfil',
     name: 'profile',
-    component: () => import(/* webpackChunkName: "about" */ '../views/profile/ProfileView.vue')
-  },
-  {
-    path: '/edicion-de-perfil/editar',
-    name: 'Editprofile',
-    component: () => import(/* webpackChunkName: "about" */ '../views/profile/editPerfil.vue')
-  },
+    component: () => import( '../views/profile/ProfileView.vue')
+  },*/
   
 ]
 
