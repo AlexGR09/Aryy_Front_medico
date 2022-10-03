@@ -5,18 +5,21 @@ import CalendarView from '../views/calendar/CalendarView.vue'
 
 Vue.use(VueRouter)
 
+
 const routes = [
 
-  /*Ruta Dasboard | Luis Reyes */
+  /*Route Dashboard | Luis Reyes */
   {
     path: '/',
-    name: 'dashboard'
+    redirect: 'dashboard'
   },
   {
-    path: '/dashboard',
-    name: 'dashboard',
-    component: () => import(/* webpackChunkName: "dashboard" */ '../views/dashboardView.vue')
+    path:'/dashboard',
+    name:'dashboard',
+    component: () => import(/* webpackChunkName: "about" */ '@/views/dashboard/Dashboard.vue')
   },
+
+  /*Route Calendario | Luis Reyes */
   {
     path: '/calendar',
     name: 'calendario',
@@ -27,6 +30,8 @@ const routes = [
     name: 'about',
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
+
+
   /*RUTA CALENDARIO */
   {
     path: '/calendar',
@@ -104,3 +109,4 @@ const router = new VueRouter({
 
 
 export default router
+
