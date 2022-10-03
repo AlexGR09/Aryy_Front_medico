@@ -1,5 +1,5 @@
 <template>
-    <v-app-bar app color="#F5F6FA" flat>
+    <v-app-bar app color="#fff" >
         <v-spacer></v-spacer>
         <v-btn class="ml-2" icon small>
             <v-icon dark>
@@ -18,3 +18,4 @@
         </v-btn>
     </v-app-bar>
 </template>
+

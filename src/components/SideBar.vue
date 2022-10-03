@@ -7,12 +7,13 @@
         </div>
         <v-list-item class="px-2">
             <v-list-item-avatar>
-                <v-img :src="require('@/assets/logos/ICONS_SPA_ISOTIPO.svg')" max-width="100"></v-img>
+                <v-img class="px-4" :src="require('@/assets/logos/ICONS_SPA_ISOTIPO.svg')" max-width="80"></v-img>
             </v-list-item-avatar>
             <v-list-item-title>
-                <v-img :src="require('@/assets/logos/ICONS_SPA_LOGOTIPO.svg')" max-width="100"></v-img>
+                <v-img :src="require('@/assets/logos/ICONS_SPA_LOGOTIPO.svg')" max-width="80"></v-img>
             </v-list-item-title>
         </v-list-item>
+        <v-divider></v-divider>
         <v-list dense>
             <v-list-item-group v-model="selectedItem" color="white" active-class="bg-active">
                 <v-list-item class="px-2 btn-icons-list" v-for="(item, i) in items" :key="i" v-slot="{ active }" route
@@ -35,17 +36,17 @@ export default {
         return {
             drawer: true,
             items: [
-                { url: require("@/assets/iconos/icon_inicio.svg"), title: 'Inicio', route: '/calendar', },
+                { url: require("@/assets/iconos/icon_inicio.svg"), title: 'Inicio', route: '/dashboard', },
                 { url: require("@/assets/iconos/icon_calendario.svg"), title: 'Calendario', route: '/patients' },
                 { url: require("@/assets/iconos/icon_paciente.svg"), title: 'Pacientes', route: '/messages' },
-                { url: require("@/assets/iconos/icon_mensaje.svg"), title: 'Mensajes', route: '/dashboard' },
+                { url: require("@/assets/iconos/icon_mensaje.svg"), title: 'Mensajes', route: '/hola' },
                 { url: require("@/assets/iconos/icon_finanzas.svg"), title: 'Finanzas', route: '/vouchers' },
                 { url: require("@/assets/iconos/icon_estadistica.svg"), title: 'Estadísticas', route: '/campaigns' },
                 { url: require("@/assets/iconos/icon_marketing.svg"), title: 'Marketing', route: '/quotes' },
                 { url: require("@/assets/iconos/icon_noticia.svg"), title: 'Noticias', route: '/settings' },
-                { url: require("@/assets/iconos/icon_compras.svg"), title: 'Compras',},
-                { url: require("@/assets/iconos/icon_asistente.svg"), title: 'Asistente',  },
-                { url: require("@/assets/iconos/icon_ajuste.svg"), title: 'Ajustes',},
+                { url: require("@/assets/iconos/icon_compras.svg"), title: 'Compras', },
+                { url: require("@/assets/iconos/icon_asistente.svg"), title: 'Asistente', },
+                { url: require("@/assets/iconos/icon_ajuste.svg"), title: 'Ajustes', },
             ],
             mini: true,
         }
@@ -59,7 +60,7 @@ export default {
 }
 
 .v-navigation-drawer {
-    border-right: 1px solid #ddd;
+    border-right: 1px solid rgb(158, 157, 157);
     height: 85px;
     box-shadow: 3px 0px 5px 1px #eaeaea;
 }
@@ -80,20 +81,11 @@ export default {
     color: white;
     text-decoration: none;
 }
-
 .btn-icon {
-
-    
     z-index: 30;
-    /*El z-index es mayor al de la caja azul por lo que se muestra primero que la caja roja*/
-    /*   left:100px;
-  top:100px; */
-  
     top: 330px;
     left: 30px;
     border-radius: 2px;
-
-
-padding: 5px;
+    padding: 5px;
 }
 </style>

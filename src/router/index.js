@@ -6,6 +6,17 @@ import CalendarView from '../views/calendar/CalendarView.vue'
 Vue.use(VueRouter)
 
 const routes = [
+
+  /*Ruta Dasboard | Luis Reyes */
+  {
+    path: '/',
+    name: 'dashboard'
+  },
+  {
+    path: '/dashboard',
+    name: 'dashboard',
+    component: () => import(/* webpackChunkName: "dashboard" */ '../views/dashboardView.vue')
+  },
   {
     path: '/calendar',
     name: 'calendario',
