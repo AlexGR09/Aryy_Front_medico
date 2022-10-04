@@ -1,6 +1,7 @@
+<!--Maquetación de componentes al Dashboard | Luis Reyes-->
 <template>
-    <!--Maquetación de componentes al Dashboard | Luis Reyes-->
-    <v-row>
+    <div class="container">
+        <v-row class="row">
         <v-col cols="12" md="4">
             <h4>CITAS</h4>
             <dashboard-citas></dashboard-citas>
@@ -24,6 +25,7 @@
             <dashboard-noticias></dashboard-noticias>
         </v-col>
     </v-row>
+    </div>
 </template>
 <script>
 

@@ -16,16 +16,20 @@ const routes = [
   {
     path:'/dashboard',
     name:'dashboard',
-    component: () => import(/* webpackChunkName: "about" */ '@/views/dashboard/Dashboard.vue')
+    component: () => import(/* webpackChunkName: "dashboard" */ '@/views/dashboard/Dashboard.vue')
   },
 
-  /*Route Calendario | Luis Reyes */
-  {
-    path: '/calendar',
-    name: 'calendario',
-    component: CalendarView
-  },
-  {
+
+
+/* Route Pacientes | Luis Reyes */
+
+  
+
+
+
+
+
+{
     path: '/about',
     name: 'about',
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
@@ -36,13 +40,13 @@ const routes = [
   {
     path: '/calendar',
     name: 'calendar',
-    component: () => import(/* webpackChunkName: "about" */ '../views/calendar/CalendarView.vue')
+    component: () => import(/* webpackChunkName: "about" */ '@/views/tablas/SimpleTable.vue')
   },
   /*RUTA PACIENTE */
   {
     path: '/patients',
     name: 'patient',
-    component: () => import(/* webpackChunkName: "about" */ '../views/patient/patient-view.vue')
+    component: () => import(/* webpackChunkName: "about" */ '@/views/tablas/SimpleTable.vue')
   },
   {
     path: '/patients/agregar',
