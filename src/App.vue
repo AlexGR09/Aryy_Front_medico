@@ -1,7 +1,7 @@
 <template>
-  <v-app>
-    <SideBar />
-    <SystemBar />
+  <v-app><!-- 
+    <SideBar /> -->
+    <!-- <SystemBar /> -->
     <v-main>
       <router-view></router-view>
     </v-main>
@@ -10,16 +10,16 @@
 
 <script>
 
-import SideBar from './components/SideBar.vue'
+/* import SideBar from './components/SideBar.vue'
 import SystemBar from './components/SystemBar.vue';
 
-
+ */
 export default {
   name: 'App',
 
   components: {
-    SideBar,
-    SystemBar
+    /* SideBar,
+    SystemBar */
   },
 
   data: () => ({}),
