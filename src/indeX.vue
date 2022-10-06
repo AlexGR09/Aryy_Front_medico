@@ -1,11 +1,8 @@
 <template>
-    <v-app>
+    <div>
       <SideBar />
       <SystemBar />
-      <v-main>
-        <router-view></router-view>
-      </v-main>
-    </v-app>
+    </div>
   </template>
   
   <script>
@@ -21,7 +18,6 @@
       SystemBar
     },
   
-    data: () => ({}),
   };
   </script>
   

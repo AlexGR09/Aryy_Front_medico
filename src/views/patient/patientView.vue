@@ -17,10 +17,15 @@
                 <div>
                 </div>
                 <br>
+                <v-col
+                    md="12"
+                    align="center"
+                    justify="center">
+                <v-card width="1500" rounded>
+                    <v-card-text>
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">ID</th>
                             <th scope="col">NOMBRE Y APELLIDOS</th>
                             <th scope="col">TELÉFONO</th>
                             <th scope="col">ÚLTIMA VISITA</th>
@@ -30,7 +35,6 @@
                     </thead>
                     <tbody v-for="character in characters" :key="character.id">
                         <tr>
-                            <th scope="row">{{character.id}}</th>
                             <td>{{character.name}}</td>
                             <td>{{character.species}}</td>
                             <td>{{character.name}}</td>
@@ -46,8 +50,12 @@
                         </tr>
                     </tbody>
                 </table>
+            </v-card-text>
+            </v-card>
+        </v-col>
             </div>
         </div>
+        <br />
         <div>
             <nav aria-label="Page navigation example ">
                 <ul class="pagination">
@@ -105,4 +113,12 @@ export default {
     }
 }
 </script>
+<style>
+    th{
+        font-family: Montserrat;
+    }
+    tbody{
+        font-family: MontserratBold;
+    }
+</style>
 

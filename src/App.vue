@@ -1,5 +1,7 @@
 <template>
-  <v-app><!-- 
+  <v-app
+  style="
+    background: #f4edff"><!-- 
     <SideBar /> -->
     <!-- <SystemBar /> -->
     <v-main>
