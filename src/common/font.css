@@ -28,3 +28,9 @@
     font-weight: normal;
     font-style: light;
 }
+@font-face{
+    font-family: "MontserratMedium";
+    src: url(./MontserratMedium.ttf);
+    font-weight: normal;
+    font-style: light;
+}

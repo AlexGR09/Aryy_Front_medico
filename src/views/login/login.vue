@@ -1,12 +1,26 @@
 <template>
     <v-row>
         <v-col
+        xs="7"
+        sm="7"
         md="7"
+        lg="7"
+        mg="7"
         >
-        <video ref="videoRef" :src="require('@/assets/videos/intro.mp4')"  id="video-container" width="100%" playsinline muted loop autoplay></video>
+        <video
+          :src="require('@/assets/videos/intro.mp4')"
+          playsinline
+          width="100%"
+          loop
+          autoplay
+        ></video>
         </v-col>
         <v-col
+        xs="5"
+        sm="5"
         md="5"
+        lg="5"
+        mg="5"
         >
         <form-login />
         </v-col>
@@ -21,3 +35,7 @@
     },
   }
 </script>
+<style>
+video{
+}
+</style>

@@ -59,6 +59,8 @@
                 </ul>
             </nav>
         </div>
+        
+    <inde-x />
     </div>
 </template>
 
@@ -66,12 +68,13 @@
 <script>
 // eslint-disable-next-line
 /* eslint-disable */
+import indeX from '@/indeX.vue'
 import axios from 'axios'
 export default {
     name: 'ProfileView',
     components: 
     {
-        
+        indeX,
     },
     data() {
 
