@@ -2,8 +2,7 @@
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col">
-                <br>
-                <form class="form-inline my-2 my-lg-0">
+                <!-- <form class="form-inline my-2 my-lg-0">
                     <input v-model="search" class="form-control mr-sm-2 roundend" type="search"
                         placeholder="Busqueda por nombre" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
@@ -13,7 +12,7 @@
                         <v-btn class="mt-6 mr-6" color="primary" elevation="2" router to="/addPatient">Agregar
                             paciente</v-btn>
                     </div>
-                </div>
+                </div> -->
                 <div>
                 </div>
                 <br>
@@ -38,14 +37,36 @@
                             <td>{{character.name}}</td>
                             <td>{{character.species}}</td>
                             <td>{{character.name}}</td>
-                            <td>{{character.species}}</td>
+                            <td><a class="date">Crear cita</a></td>
                             <td>
+                                <v-btn
+                                    icon
+                                    color="green"
+                                >
+                                    <v-icon>fa fa-eye</v-icon>
+                                </v-btn>
+                                <v-btn
+                                    icon
+                                    color="primary"
+                                >
+                                    <v-icon>fa fa-eyefa-sharp fa-solid fa-pen</v-icon>
+                                </v-btn>
+                                <v-btn
+                                icon
+                                    color="error"
+                                >
+                                    <v-icon>fa fa-trash</v-icon>
+                                </v-btn>
+                               
+                                <!-- <button type="button" class=" boton ml-4">
+                                    <i class="fa fa-eye"></i> 
+                                </button>
                                 <button type="button" class="btn btn-outline-success ml-4">
-                                    <i class="fa fa-edit" aria-hidden="true"></i>
+                                    <i class="fa-sharp fa-solid fa-pen" aria-hidden="true"></i>
                                 </button>
                                 <button type="button" class="btn btn-outline-danger ml-4">
                                     <i class="fa fa-trash" aria-hidden="true"></i>
-                                </button>
+                                </button> -->
                             </td>
                         </tr>
                     </tbody>
@@ -119,6 +140,14 @@ export default {
     }
     tbody{
         font-family: MontserratBold;
+    }
+    a.date{
+        color: #9966ff !important;
+        font-family: Montserrat;
+        font-size: 15px;
+    }
+    .boton{
+        color: #9966ff;
     }
 </style>
 

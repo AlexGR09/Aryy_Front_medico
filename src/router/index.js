@@ -11,12 +11,6 @@ const routes = [
     name: 'login',
     component: () => import(/* webpackChunkName: "about" */ '../views/login/login.vue')
   },
-  /*RUTA CALENDARIO */
-  /*{
-    path: '/calendar',
-    name: 'calendar',
-    component: () => import( '../views/calendar/calendarView.vue')
-  },*/
   /*RUTA PACIENTE */
   {
     path: '/patient',
