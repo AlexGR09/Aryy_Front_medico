@@ -1,5 +1,5 @@
 <template>
-    <v-row>
+    <v-row class="fondo">
         <v-col
         xs="7"
         sm="7"
@@ -10,6 +10,7 @@
         <video
           :src="require('@/assets/videos/intro.mp4')"
           playsinline
+          class="mt-n4"
           width="100%"
           loop
           autoplay
@@ -36,6 +37,9 @@
   }
 </script>
 <style>
-video{
+.fondo{
+background: white;
+
+margin-top: 0rem;
 }
 </style>

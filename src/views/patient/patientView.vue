@@ -39,34 +39,15 @@
                             <td>{{character.name}}</td>
                             <td><a class="date">Crear cita</a></td>
                             <td>
-                                <v-btn
-                                    icon
-                                    color="green"
-                                >
-                                    <v-icon>fa fa-eye</v-icon>
+                                <v-btn class="ml-2" icon small>
+                                  <v-img :src="require('@/assets/iconos/ICONS_SPA_PACIENTES_2_BT_VER.svg')" max-width="23"></v-img>
                                 </v-btn>
-                                <v-btn
-                                    icon
-                                    color="primary"
-                                >
-                                    <v-icon>fa fa-eyefa-sharp fa-solid fa-pen</v-icon>
+                                <v-btn class="ml-2" icon small>
+                                  <v-img :src="require('@/assets/iconos/ICONS_SPA_PACIENTES_2_BT_EDIT.svg')" max-width="23"></v-img>
                                 </v-btn>
-                                <v-btn
-                                icon
-                                    color="error"
-                                >
-                                    <v-icon>fa fa-trash</v-icon>
+                                <v-btn class="ml-2" icon small>
+                                  <v-img :src="require('@/assets/iconos/ICONS_SPA_PACIENTES_2_BT_BORR.svg')" max-width="23"></v-img>
                                 </v-btn>
-                               
-                                <!-- <button type="button" class=" boton ml-4">
-                                    <i class="fa fa-eye"></i> 
-                                </button>
-                                <button type="button" class="btn btn-outline-success ml-4">
-                                    <i class="fa-sharp fa-solid fa-pen" aria-hidden="true"></i>
-                                </button>
-                                <button type="button" class="btn btn-outline-danger ml-4">
-                                    <i class="fa fa-trash" aria-hidden="true"></i>
-                                </button> -->
                             </td>
                         </tr>
                     </tbody>
