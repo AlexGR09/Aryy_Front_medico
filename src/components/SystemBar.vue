@@ -20,6 +20,7 @@
                 >
                  Agregar pacientes
                  <v-img :src="require('@/assets/iconos/ICONS_SPA_PACIENTES_2_AGREGAR.svg')" class="ml-2" max-width="17"></v-img>
+                 <h1></h1>
                 </v-btn>
         <input 
             ref="uploader" 
