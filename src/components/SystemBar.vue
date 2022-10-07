@@ -15,6 +15,12 @@
                  Importar pacientes
                  <v-img :src="require('@/assets/iconos/ICONS_SPA_PACIENTES_2_IMPORTAR.svg')" class="ml-2" max-width="17"></v-img>
                 </v-btn>
+                <input 
+            ref="uploader" 
+            class="d-none" 
+            type="file" 
+            @change="onFileChanged"
+        >
                 <v-btn 
                     color="primary"
                     class="ml-2 mr-2 boton"
