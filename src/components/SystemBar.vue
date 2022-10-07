@@ -1,12 +1,14 @@
 <template>
-    <v-app-bar app color="white"  height="90">
+    <v-app-bar app color="white"  height="100">
+        <h3>{{ $options.name}}</h3>
         <v-spacer></v-spacer>
         <form class="form-inline my-2 my-lg-0">
-          <input size="50px" v-model="search" class="form-control mr-sm-2 roundend" type="search"
+          <input size="50px" v-model="search" class="form-control mr-6 roundend" type="search"
                         placeholder="Buscar paciente" aria-label="Search">
                 </form>
                 <v-btn 
                     outlined
+                    class="boton mr-4"
                     :loading="isSelecting" 
                     @click="handleFileImport"
                 >
@@ -15,26 +17,19 @@
                 </v-btn>
                 <v-btn 
                     color="primary"
-                    :loading="isSelecting" 
-                    @click="handleFileImport"
+                    class="ml-2 mr-2 boton"
                 >
-                 Agregar pacientes
+                 Agregar paciente
                  <v-img :src="require('@/assets/iconos/ICONS_SPA_PACIENTES_2_AGREGAR.svg')" class="ml-2" max-width="17"></v-img>
                  <h1></h1>
                 </v-btn>
-        <input 
-            ref="uploader" 
-            class="d-none" 
-            type="file" 
-            @change="onFileChanged"
-        >
-        <v-btn class="ml-2" icon small>
-            <v-img :src="require('@/assets/iconos/ICONS_SPA_PACIENTES_2_AJUSTES_1.svg')" max-width="23"></v-img>
+        <v-btn class="ml-4" icon small>
+            <v-img :src="require('@/assets/iconos/ICONS_SPA_PACIENTES_2_AJUSTES.svg')" max-width="23"></v-img>
         </v-btn>
-        <v-btn class="ml-2" icon small>
+        <v-btn class="ml-4" icon small>
             <v-img :src="require('@/assets/iconos/ICONS_SPA_PACIENTES_2_NOTIFICACION.svg')" max-width="23"></v-img>
         </v-btn>
-        <v-btn class="ml-3" fab small color="#7900ff">
+        <v-btn class="ml-5 mr-7" fab  color="#7900ff">
             <v-icon large color="#fff">
                 mdi-account
             </v-icon>
@@ -43,6 +38,7 @@
 </template>
 <script>
     export default {
+        name: "VistaPacientes",
         data(){
             return {
                 isSelecting: false,
@@ -69,3 +65,12 @@
         }
     }
 </script>
+<style>
+.boton{
+    text-transform: unset !important;
+    font-family: MontserratMedium;
+}
+h3{
+    font-family: MontserratBold;
+}
+</style>

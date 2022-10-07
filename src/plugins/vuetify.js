@@ -9,6 +9,7 @@ Vue.use(Vuetify);
 const theme = {
   primary: '#7900ff',
   secondary: '#9966ff',
+  clarito: '#f4edff',
   accent: '#1dc4cd',
   info: '#00CAE3',
   success: '#4CAF50',
