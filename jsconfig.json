@@ -4,6 +4,7 @@
     "module": "esnext",
     "baseUrl": "./",
     "moduleResolution": "node",
+    "jsx": "preserve", //ELIMINAR LOS PROBLEMAS DE TYPESCRIPT
     "paths": {
       "@/*": [
         "src/*"

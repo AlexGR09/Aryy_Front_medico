@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#A360FF;}
+	.st1{fill:#7900FF;}
+	.st2{fill:#999999;}
+	.st3{fill:#FFFFFF;}
+</style>
+<g>
+	<g>
+		<path class="st1" d="M217.1,192.5c-32.2,0-53.9,21.6-53.9,53.7c0,31.6,21.7,53.7,52.8,53.7c14.2,0,26.1-4.7,34.4-13.6v11.8h20.4
+			v-51.9C270.8,214.1,249.3,192.5,217.1,192.5z M217.1,212.9c20.1,0,33.1,13.1,33.1,33.3s-13,33.3-33.1,33.3
+			c-20.3,0-33.5-13.1-33.5-33.3S196.8,212.9,217.1,212.9z"/>
+		<g>
+			<path class="st1" d="M416.7,257.9l22.7-64.6l-0.3-0.9h-21.5l0.6,1.8h-0.1l-25.6,70.5l-25.9-72.3h-12.1h-9.4h-5.2
+				c-32.1,0-53.7,21.6-53.7,53.7v51.9h20.4v-51.9c0-20.2,13.1-33.3,33.3-33.3h12.5l29.5,82.1l-12.7,35.7h21.5L416.7,257.9
+				L416.7,257.9z"/>
+			<polygon class="st1" points="490.7,194.3 465,264.8 445.4,209.8 435.1,241 454.5,295 441.7,330.7 463.3,330.7 512,194.3 			"/>
+		</g>
+	</g>
+	<g>
+		<path class="st0" d="M48.4,246.8c0-9.4,7.7-17.1,17.1-17.1s17.1,7.7,17.1,17.1c0,9.4-7.7,17.1-17.1,17.1S48.4,256.2,48.4,246.8z"
+			/>
+		<circle class="st0" cx="25.1" cy="206.4" r="9.1"/>
+		<circle class="st1" cx="65.5" cy="198.4" r="17.1"/>
+		<circle class="st1" cx="65.5" cy="295.2" r="17.1"/>
+		<circle class="st1" cx="17.1" cy="246.8" r="17.1"/>
+		<circle class="st1" cx="113.8" cy="246.8" r="17.1"/>
+		<g>
+			<circle class="st0" cx="104.7" cy="286" r="9.1"/>
+		</g>
+	</g>
+</g>
+</svg>
